@@ -14,6 +14,6 @@ var stage = /staging/.test(location.href);
 var rootPath = github ? '/' : '/';
 rootPath = stage ? '/staging/' : rootPath;
 
-location.href = rootPath + '?path=' + page.path + '&title=' + page.title;
+// location.href = rootPath + '?path=' + page.path + '&title=' + page.title;
 // console.log(rootPath + '?path=' + path + '&title=' + title)
 

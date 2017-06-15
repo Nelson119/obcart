@@ -1,2 +1,49 @@
 header {
+
+	.container{
+		position: relative;
+	}
+	nav.menu{
+		line-height: 45px;
+		a{
+			padding: 0 44px;
+			height: 45px;
+			display: inline-block;
+
+			&:last-child{
+				color: #b50408!important;
+			}
+
+			&:hover{
+				background: #000;
+				color: #fff;
+			}
+		}
+	}
+
+	nav.functions{
+		position: absolute;
+
+		right: 15px;
+		top: 15px;
+
+		text-align: right;
+
+		a{
+			font-size: em(20, 14);
+			display: inline-block; 
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			&:hover{
+
+			}
+			sub{
+				color: #b50408;
+				margin-left: -0.1em;
+			}
+		}
+	}
+
+	border-bottom: 1px solid #999;
 }

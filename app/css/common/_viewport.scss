@@ -10,12 +10,12 @@
 	}
 }
 @media screen and (max-width: #{$screen-xs - 1}) {
-	html, body, .background, header, header nav,.app.content{
+	html, body, .background, header, header nav{
 		min-width: 320px;
 		max-width: 100%;
 		max-width: 100vw;
 	}
 	[role="main"]{
-		margin-bottom: per(128, 640);
+		// margin-bottom: per(128, 640);
 	}
 }

@@ -4,8 +4,10 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "font-awesome": "fontawesome#^4.6.3",
-    "detectizr": "^2.2.0"
+    "font-awesome": "^4.7.0",
+    "detectizr": "^2.2.0",
+    "gsap": "^1.19.1",
+    "lodash": "^4.17.4"
   },
   "overrides": {
     "bootstrap-sass": {

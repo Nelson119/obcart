@@ -40,8 +40,8 @@ app.partial.spa = function(){
 				if($(element).attr('property') === 'og:title'){
 					title = $(element).attr('content');
 				}
-				if($(element).attr('role') === 'main'){
-					htmlContent = element;
+				if($(element).attr('role') === 'container'){
+					htmlContent = $(element).find('[role=main]');
 				}
 			});
 			if(!isPopstate){

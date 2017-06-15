@@ -1,0 +1,21 @@
+.cart{
+	.list-head{
+		margin: 1.5em auto 0.5em;
+	}
+	.list-item{
+		img{
+			max-width: 100%;
+		}
+		span{
+			line-height: 75px;
+			height: 75px;
+			white-space: nowrap;
+		}
+	}
+	hr{
+		border-color: #999;
+	}
+	.fa-trash{
+		font-size: 1.2em;
+	}
+}
