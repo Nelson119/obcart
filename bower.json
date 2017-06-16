@@ -7,7 +7,8 @@
     "font-awesome": "^4.7.0",
     "detectizr": "^2.2.0",
     "gsap": "^1.19.1",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "bootstrap-select": "^1.12.2"
   },
   "overrides": {
     "bootstrap-sass": {

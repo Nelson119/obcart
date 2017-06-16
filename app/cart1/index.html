@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>cart1</title>
 
-    <meta property="og:title" content="about"/>
+    <meta property="og:title" content="cart1"/>
     <meta property="og:description" content=""/>
     <meta property="og:url" content=""/>
     <meta property="og:image" content=""/>
@@ -16,6 +16,7 @@
 
     <!-- build:css css/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -30,7 +31,7 @@
     <!-- endbuild -->
 
     <!-- build:js js/about.js -->
-    <script src="../js/components/about.js"></script>
+    <!-- <script src="../js/components/about.js"></script> -->
     <!-- endbuild -->
 
     <!-- build:js js/redirect.js -->
@@ -79,7 +80,7 @@
 
         <!--中文選單-->
         <nav class="functions">
-          <a href="javascript:" data-href="cart1"><i class="fa fa-shopping-cart"></i><sub>3</sub></a>
+          <a href="javascript:" data-href="../cart1" data-name="cart1"><i class="fa fa-shopping-cart"></i><sub>3</sub></a>
         </nav>
         <!--./英文選單-->
 
@@ -103,21 +104,22 @@
           <a>OB嚴選品牌旗艦店</a>
         </nav> -->
         <aside class="row list-head">
-          <span class="col-xs-6 text-center">商品名稱</span>
-          <span class="col-xs-1 text-center"></span>
-          <span class="col-xs-1 text-center"></span>
-          <span class="col-xs-1 text-center"></span>
-          <span class="col-xs-1 text-center"></span>
-          <span class="col-xs-1 text-center"></span>
-          <span class="col-xs-1 text-center"></span>
+          <span class="col-xs-5 col-xs-offset-1 text-center">商品名稱</span>
+          <span class="col-xs-1 text-center">顏色</span>
+          <span class="col-xs-1 text-center">尺寸</span>
+          <span class="col-xs-1 text-center">數量</span>
+          <span class="col-xs-1 text-center">單價</span>
+          <span class="col-xs-1 text-center">小計</span>
+          <span class="col-xs-1 text-center">刪除</span>
         </aside>
 
-        <aside class="row list-item">
+        <aside class="row list-item text-center">
           <hr/>
           <span class="col-xs-1 vertical-middle">
           <img data-src="../img/UAR0014-L.jpg"></span>
           <span class="col-xs-5 vertical-middle">
-            0609新品 【特價款】韓國動物綴條紋後跟防滑隱形襪．5色(任3雙198)</span>
+            <a href="javascript:" class="ellipsis text-left" data-toggle="tooltip"> 0609新品 【特價款】韓國動物綴條紋後跟防滑隱形襪．5色(任3雙198) </a>
+          </span>
           <span class="col-xs-1 vertical-middle">
             黃
           </span>
@@ -125,29 +127,26 @@
             F
           </span>
           <span class="col-xs-1 vertical-middle">
-            <select class="form-control">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
+            <input class="form-control" type="number" min="1" max="20" value="1"/>
           </span>
-          <span class="col-xs-1 vertical-middle">
-            NT$79
+          <span class="col-xs-1 vertical-middle money">
+            NT$9999
           </span>
-          <span class="col-xs-1 vertical-middle">
-            NT$79
+          <span class="col-xs-1 vertical-middle money">
+            NT$9999
           </span>
           <span class="col-xs-1 vertical-middle">
             <a href="javascript:"><i class="fa fa-trash"></i></a>
           </span>
         </aside>
 
-        <aside class="row list-item">
+        <aside class="row list-item text-center">
           <hr/>
           <span class="col-xs-1 vertical-middle">
           <img data-src="../img/ZB0267-L.jpg"></span>
           <span class="col-xs-5 vertical-middle">
-            0609新品 【特價款】韓國動物綴條紋後跟防滑隱形襪．5色(任3雙198)</span>
+            <a href="javascript:" class="ellipsis text-left" data-toggle="tooltip"> 0609新品 【特價款】韓國動物綴條紋後跟防滑隱形襪．5色(任3雙198) </a>
+          </span>
           <span class="col-xs-1 vertical-middle">
             黃
           </span>
@@ -155,28 +154,26 @@
             F
           </span>
           <span class="col-xs-1 vertical-middle">
-            <select class="form-control">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
+            <input class="form-control" type="number" min="1" max="20" value="1"/>
           </span>
-          <span class="col-xs-1 vertical-middle">
-            NT$79
+          <span class="col-xs-1 vertical-middle money">
+            NT$9999
           </span>
-          <span class="col-xs-1 vertical-middle">
-            NT$79
+          <span class="col-xs-1 vertical-middle money">
+            NT$9999
           </span>
           <span class="col-xs-1 vertical-middle">
             <a href="javascript:"><i class="fa fa-trash"></i></a>
           </span>
         </aside>
-        <aside class="row list-item">
+
+        <aside class="row list-item text-center">
           <hr/>
           <span class="col-xs-1 vertical-middle">
           <img data-src="../img/AB3489-L.jpg"></span>
           <span class="col-xs-5 vertical-middle">
-            0609新品 【特價款】韓國動物綴條紋後跟防滑隱形襪．5色(任3雙198)</span>
+            <a href="javascript:" class="ellipsis text-left" data-toggle="tooltip"> 0609新品 【特價款】韓國動物綴條紋後跟防滑隱形襪．5色(任3雙198) </a>
+          </span>
           <span class="col-xs-1 vertical-middle">
             黃
           </span>
@@ -184,22 +181,121 @@
             F
           </span>
           <span class="col-xs-1 vertical-middle">
-            <select class="form-control">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-            </select>
+            <input class="form-control" type="number" min="1" max="20" value="1"/>
           </span>
-          <span class="col-xs-1 vertical-middle">
-            NT$79
+          <span class="col-xs-1 vertical-middle money">
+            NT$9999
           </span>
-          <span class="col-xs-1 vertical-middle">
-            NT$79
+          <span class="col-xs-1 vertical-middle money">
+            NT$9999
           </span>
           <span class="col-xs-1 vertical-middle">
             <a href="javascript:"><i class="fa fa-trash"></i></a>
           </span>
         </aside>
+
+        <aside class="row shipment text-center">
+          <hr/>
+          <span class="col-xs-1 vertical-middle">
+            <img class="shipment-thumb" data-src="../img/7-11.png">
+          </span>
+          <span class="col-xs-5 vertical-middle">
+            <span>運費 </span>
+          </span>
+          <span class="col-xs-4">
+          </span>
+          <span class="col-xs-1 vertical-middle money">
+            NT$<span class="shipment-fee">120</span>
+          </span>
+        </aside>
+
+        <aside class="row shipment-and-payment text-center">
+          <section class="col-xs-1 vertical-middle text-right">
+            <span>運送區域</span>
+          </section>
+          <section class="col-xs-2 vertical-middle text-left">
+            <select class="form-control" name="region">
+            </select>
+          </section>
+          <section class="col-xs-1 vertical-middle text-right">運送方式</section>
+          <section class="col-xs-4 vertical-middle text-left">
+            <select class="form-control" name="shipment">
+            </select>
+          </section>
+          <section class="col-xs-1 vertical-middle text-right">付款方式</section>
+          <section class="col-xs-3 vertical-middle text-left">
+            <select class="selectpicker form-control" name="payment">
+            </select>
+          </section>
+        </aside>
+
+        <aside class="row amount text-center ">
+          <span class="col-xs-offset-6 col-xs-6">
+            <aside class="row">
+              <aside class="col-xs-6 vertical-middle">
+                <img data-src="../img/Specialinfo.jpg">
+              </aside>
+              <aside class="col-xs-6 vertical-middle amount-detail">
+                <span>應付金額</span> 
+                <span class="fontsize-36 highlight">
+                  <sub>NT$</sub> 
+                  <span class="dollar">398</span> 
+                  <sub>(2)</sub>
+                </span>
+              </aside>
+            </aside>
+          </span>
+          <span class="col-xs-offset-8 col-xs-4 text-right buttons">
+            <aside class="row">
+              <button class="btn-default btn" id="btnBack">回上頁繼續購物</button>
+              <a data-href="../cart2" class="btn-default btn" id="btnNext">我要結帳</a>
+            </aside>
+          </span>
+        </aside>
+
+        <aside class="row inportant-message">
+          <aside class="col-xs-2 text-center">
+            <img data-src="../img/inpo.jpg">
+          </aside>
+          <aside class="col-xs-10">
+            <ul>
+              <li>
+                <span class="highlight fontsize-16">重要訊息</span><br>
+              </li>
+              <li>1、如訂購商品無法順利出貨或缺貨，我們將以MAIL通知並直接取消該商品，訂單內如還有其他商品也將繼續為您安排出貨作業。(海外訂單不適用)
+              </li>
+              <li>2、台灣買家訂購前注意事項：
+              </li>
+              <li>➲ 單次結帳金額未達免運資格(不包含物流費、回饋金的抵用金額)，將酌收物流費用50元。
+              </li>
+              <li>➲ 一旦訂單完成結帳，恕無法修改任何訂單資料，免運或滿額等所有優惠亦無法合併計算。
+              </li>
+              <li>➲ 注意:如退貨後訂單未達加價購門檻，且加價購又未附回者，將視為訂單缺件或毀損，恕無法辦理退貨!請務必一起退回!
+              </li>
+            </li>
+            </ul>
+          </aside>
+        </aside>
+
+        <aside class="row add-go">
+          <span class="col-xs-12 fontsize-18 text-center headline">
+            購物滿額即可以優惠價加購商品，滿額越高優惠越多!<a href="http://www.obdesign.com.tw/QAinfo/QAinfo-1.html" target="_blank">加價購說明</a> </span>
+
+          <ul class="col-xs-12">
+            <li>加價購商品僅限於購物車頁面選購。</li>
+            <li>購物金額達到指定加購門檻價時，加購商品金額會自動變更為符合門檻的優惠價格。</li>
+            <li>加價購商品不能以回饋金折抵。</li>
+            <li>考量到國際運送不易，請海外會員不要選購標示【台灣限定】的加價購商品。</li>
+          </ul>
+        </aside>
+<!-- 
+        <aside class="row back-top">
+          <span class="col-xs-12">
+            <a href="javascript:TweenMax.to('body,html', 0.5, {scrollTop: 0});void(0);"><img data-src="../img/backTOP.jpg"></a>
+          </span>
+        </aside> -->
+
+        
 
       </section>
 
@@ -228,6 +324,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
     <!-- endbower -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -243,9 +340,6 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <!-- endbuild -->
     
-    <!-- build:js js/plugins.js -->
-    <!-- endbuild -->
-    
     <!-- build:js js/main.js -->
     <script src="../js/app.js"></script>
     <script src="../js/utility.js"></script>
@@ -254,5 +348,12 @@
     <script src="../js/i18n.js"></script>
     <script src="../js/ga.js"></script>
     <!-- endbuild -->
+
+
+    <!-- build:js js/cart1.js -->
+    <script src="../js/components/cart1.js"></script>
+    <!-- endbuild -->
+
+
   </body>
 </html>

@@ -1,6 +1,6 @@
 .cart{
 	.list-head{
-		margin: 1.5em auto 0.5em;
+		margin: 1.5em -15px 0.5em;
 	}
 	.list-item{
 		img{
@@ -10,6 +10,59 @@
 			line-height: 75px;
 			height: 75px;
 			white-space: nowrap;
+			>.ellipsis{
+				white-space: nowrap; 
+				width: 20em; 
+				overflow: hidden;
+				text-overflow: ellipsis; 
+
+				& ~.tooltip{
+					top: -50%!important;
+					opacity: 0.75;
+				}
+			}
+		}
+		.money{
+
+			font-family: times ro, segoe ui;
+		}
+	}
+	.shipment-and-payment{
+		background: #E3E2E2;
+		section{
+			height: 75px;
+			select, .btn-group{
+				width: 90%;
+			}
+		}
+	}
+	.shipment{
+		margin-bottom: 25px;
+		img{
+			max-height: 50px;
+		}
+		span{
+			line-height: 50px;
+			height: 50px;
+			white-space: nowrap;
+			>.ellipsis{
+				white-space: nowrap; 
+				width: 20em; 
+				overflow: hidden;
+				text-overflow: ellipsis; 
+
+				& ~.tooltip{
+					top: -50%!important;
+					opacity: 0.75;
+				}
+			}
+		}
+		.shipment-fee{
+			line-height: 45px;
+		}
+		.money{
+
+			font-family: times ro, segoe ui;
 		}
 	}
 	hr{
@@ -17,5 +70,115 @@
 	}
 	.fa-trash{
 		font-size: 1.2em;
+	}
+
+	.dropdown-menu{
+		img{
+			max-height: 1.5em;
+			position: absolute;
+			right: 10px;
+		}
+	}
+	.dropdown-toggle{
+		img{
+			max-height: 0;
+		}
+	}
+	.amount{
+		.amount-detail{
+			height: 106px;
+			.highlight{
+				color: #fb060c;
+				font-weight: 500;
+				font-style: italic;
+				margin-top: -0.5em;
+				sub{
+					font-size: em(16, 30);
+					bottom: 0;
+				}
+			}
+		}
+	}
+
+	.inportant-message{
+	    border-top: 1px dotted #000000;
+	    padding: 1em 0;
+		line-height: 2em;
+		.highlight{
+			color: #fb060c;
+			font-weight: 500;
+		}
+
+	}
+
+	.add-go{
+		.headline{
+			color: #fff;
+			font-weight: 600;
+			background: #000;
+			line-height: 3em;
+			letter-spacing: 0.2em;
+		}
+		ul{
+			margin: 1em 1em 5em;
+		}
+		a{
+			color: #b97a57;
+		}
+		li{
+			list-style: disc;
+			line-height: 2em;
+		}
+	}
+
+	.buttons{
+		height: 5em;
+	}
+
+
+	.collapse-content{
+		&.collapsed{
+			.list-item{
+				display: inline-block;
+				position: relative;
+				>*{
+					display:none;
+				}
+				>.collapsed-image, >.collapsed-qty{
+					display: inline-block;
+					float:none;			
+					width: auto;
+					height: auto;
+					padding: 0;
+				}
+				>.collapsed-image{
+					img{
+						width: auto;
+						max-width: 120px;
+					}
+					border: 1px solid #999;
+				}
+				>.collapsed-qty{
+					position: absolute;
+					right: -1em;
+					bottom: -1em;
+					text-shadow: 0 0 2px #999;
+					line-height: 1em;
+					.qty{
+						height: auto;
+						width: 3em;
+						height: 3em;
+						line-height: 3em;
+						border: 1px solid #fb060c;
+							
+						background: #fefefe;
+						border-radius: 50%;
+					}
+				}
+			}
+			.shipment, .list-head{
+				display:none;
+			}
+		}
 	}
 }

@@ -51,7 +51,7 @@ app.partial.spa = function(){
 			container.html(htmlContent);
 
 
-
+			console.log(name);
 			container.trigger('page:update:' + name, menu);
 			container.trigger('page:update', menu);
 
@@ -83,7 +83,7 @@ app.partial.spa = function(){
 	$('a[data-href]').on('click', function(e){
 		$(this).addClass('active').siblings().removeClass('active');
 		var uri = $(this).attr('data-href');
-		var name = $(this).text();
+		var name = $(this).attr('data-name');
 		var menu = null;
 		updateContent(uri, name, menu, function(){
 			console.log(name);
