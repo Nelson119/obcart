@@ -9,9 +9,9 @@ app.partial.spa = function(){
 
 	// 網址為 gulp 或者 github 時 設定成debug 模式
 	var debug = /localhost[:]9000|github.io/.test(location.href);
-	var github = /nelson.works/.test(location.href);
+	var github = /nelson.works\/obcart/.test(location.href);
 	var stage = /staging/.test(location.href);
-	var rootPath = github ? '/' : '/';
+	var rootPath = github ? '/obcart/' : '/';
 	rootPath = stage ? '/staging/' : rootPath;
 
 
