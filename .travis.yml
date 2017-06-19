@@ -5,7 +5,7 @@ env:
 node_js:
 - '6.0'
 install:
-- yarn add gulp bower -g 
+- yarn global add gulp bower
 - yarn
 - bower install
 - gulp build
