@@ -64,8 +64,8 @@ gulp.task('components', () => {
     .pipe($.useref({searchPath: ['', '.tmp', 'app/**']}))
     // .pipe($.debug())
     // .pipe($.if(/\.css$/, $.debug()))
-    .pipe($.if(/\.js$/, $.uglify()))
-    .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
+    // .pipe($.if(/\.js$/, $.uglify()))
+    // .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist/')) ;
 });
 
