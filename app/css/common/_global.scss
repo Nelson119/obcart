@@ -31,4 +31,10 @@ html{
 	#container{
 		min-height: 100vh;
 	}
+	body{
+		@media screen and (max-width: #{$screen-md - 1}) {
+			font-size: 16px;
+			font-size: vw(16, 320);
+		}		
+	}
 }
