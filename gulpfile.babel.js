@@ -60,13 +60,15 @@ gulp.task('html', ['css', 'js', 'components'], () => {
 
 gulp.task('components', () => {
   var gutil = $.util;
-  gulp.src('app/**/*.html')
+  gulp.src(['app/**/*.html', '!app/index.html'])
     .pipe($.useref({searchPath: ['', '.tmp', 'app/**']}))
     // .pipe($.debug())
-    // .pipe($.if(/\.css$/, $.debug()))
-    // .pipe($.if(/\.js$/, $.uglify()))
-    // .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
-    .pipe(gulp.dest('dist/')) ;
+    .pipe($.if(/\.css$/, $.cssnano()))
+    .pipe($.if(/\.css$/, gulp.dest('./dist/components')))
+    .pipe($.if(/\.js$/, $.uglify()))
+    .pipe($.if(/\.js$/, gulp.dest('./dist/components')))
+    .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
+    .pipe($.if(/\.html$/, gulp.dest('dist')))
 });
 
 gulp.task('img', () => {
