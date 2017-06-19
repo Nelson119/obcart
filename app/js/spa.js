@@ -29,7 +29,7 @@ app.partial.spa = function(){
 
 
 	function updateContent(uri, name, menu, callback, isPopstate){
-		// console.log(uri, cat, cata, callback || null);
+		// console.log(uri, name, menu, callback || null);
 		isPopstate = isPopstate || false;
 		container.trigger('page:preupdate');
 		if(!isPopstate && location.pathname !== uri){
@@ -54,7 +54,7 @@ app.partial.spa = function(){
 			container.html(htmlContent);
 
 
-			console.log(name);
+			// console.log(name);
 			container.trigger('page:update:' + name, menu);
 			container.trigger('page:update', menu);
 
@@ -77,7 +77,7 @@ app.partial.spa = function(){
 			location.href = rootPath;
 		}
 		document.title = info.title;
-		updateContent(info.content, info.category, info.catalog, function(){
+		updateContent(info.uri, info.name, info.menu, function(){
 		}, true);
 		return true;
 
