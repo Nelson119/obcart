@@ -16,7 +16,7 @@ app.partial.cart2 = function(){
 
 		$('#btnBack').on('click', function(){
 			history.go(-1);
-		})
+		});
 
 	}).trigger('page:update:cart2', null);
 

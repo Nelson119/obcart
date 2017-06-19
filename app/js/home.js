@@ -6,6 +6,6 @@
 	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
 /*global app, $ */
 app.partial.home = function(){
-
+	$('body').addClass('loading-done');
 
 };

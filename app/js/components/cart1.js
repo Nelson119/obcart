@@ -4,7 +4,7 @@
 	no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
 	key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
 	eqeqeq, no-extend-native, quotes , no-inner-declarations*/
-/*global app, $ */
+/*global app, $, _ */
 app.partial.cart1 = function(){
 
     //運送及付款設定
@@ -22,25 +22,25 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "超商代收",
 						image: '../img/7-11.png',
-						paymentId: 2,
-					},{
+						paymentId: 2
+					}, {
 					// 	label: "PayPal",
 					// 	image: "../img/paypal.png",
 					// 	paymentId: 3,
-					// },{
+					// }, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
-					},{
+						paymentId: 4
+					}, {
 						label: "LinePay",
 						image: "../img/line.png",
-						paymentId: 5,
+						paymentId: 5
 					}]
-				},{
+				}, {
 					label: "便利達康取貨(OK、萊爾富、全家)",
 					image: '../img/shipment2.png',
 					shipmentId: 2,
@@ -48,25 +48,25 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "超商代收",
 						image: '../img/shipment2.png',
-						paymentId: 6,
-					},{
+						paymentId: 6
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
-					},{
+						paymentId: 4
+					}, {
 						label: "LinePay",
 						image: "../img/line.png",
-						paymentId: 5,
+						paymentId: 5
 					}]
-				},{
+				}, {
 					label: "黑貓宅急便",
 					image: '../img/cat.jpg',
 					shipmentId: 3,
@@ -74,27 +74,27 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "宅急便代收",
 						image: "../img/cat.jpg",
-						paymentId: 2,
-					},{
+						paymentId: 2
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
-					},{
+						paymentId: 4
+					}, {
 						label: "LinePay",
 						image: "../img/line.png",
-						paymentId: 5,
+						paymentId: 5
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"中國",
 			regionId: 2,
 			options:[
@@ -106,19 +106,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"香港",
 			regionId: 3,
 			options:[
@@ -130,19 +130,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"澳門",
 			regionId: 4,
 			options:[
@@ -154,19 +154,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"新加坡",
 			regionId: 5,
 			options:[
@@ -178,19 +178,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"馬來西亞",
 			regionId: 6,
 			options:[
@@ -202,19 +202,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"泰國",
 			regionId: 7,
 			options:[
@@ -226,19 +226,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"越南",
 			regionId: 8,
 			options:[
@@ -250,19 +250,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"美國",
 			regionId: 9,
 			options:[
@@ -274,19 +274,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"菲律賓",
 			regionId: 10,
 			options:[
@@ -298,19 +298,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"杜拜",
 			regionId: 11,
 			options:[
@@ -322,19 +322,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"加拿大",
 			regionId: 12,
 			options:[
@@ -346,19 +346,19 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
-		},{
+		}, {
 			label:"澳洲",
 			regionId: 13,
 			options:[
@@ -370,15 +370,15 @@ app.partial.cart1 = function(){
 					payments:[{
 						label: "信用卡付款",
 						image: "../img/visa.png",
-						paymentId: 1,
-					},{
+						paymentId: 1
+					}, {
 						label: "PayPal",
 						image: "../img/paypal.png",
-						paymentId: 3,
-					},{
+						paymentId: 3
+					}, {
 						label: "支付寶",
 						image: "../img/alipay.png",
-						paymentId: 4,
+						paymentId: 4
 					}]
 				}
 			]
