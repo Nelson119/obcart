@@ -54,10 +54,10 @@ app.partial.cart1 = function(){
 						image: '../img/shipment2.png',
 						paymentId: 6
 					}, {
-						label: "PayPal",
-						image: "../img/paypal.png",
-						paymentId: 3
-					}, {
+					// 	label: "PayPal",
+					// 	image: "../img/paypal.png",
+					// 	paymentId: 3
+					// }, {
 						label: "支付寶",
 						image: "../img/alipay.png",
 						paymentId: 4
@@ -80,10 +80,10 @@ app.partial.cart1 = function(){
 						image: "../img/cat.jpg",
 						paymentId: 2
 					}, {
-						label: "PayPal",
-						image: "../img/paypal.png",
-						paymentId: 3
-					}, {
+					// 	label: "PayPal",
+					// 	image: "../img/paypal.png",
+					// 	paymentId: 3
+					// }, {
 						label: "支付寶",
 						image: "../img/alipay.png",
 						paymentId: 4

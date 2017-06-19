@@ -104,6 +104,7 @@
 		margin-bottom: 25px;
 		img{
 			max-height: 50px;
+			max-width: 100%;
 		}
 		span{
 			line-height: 50px;
@@ -130,7 +131,10 @@
 		}
 	}
 	hr{
-		border-color: #999;
+		border-color: #999; 
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			border: 0.15em solid #0e0e0e;
+		}
 	}
 	.fa-trash{
 		font-size: 1.2em;
