@@ -30,6 +30,32 @@
 				}
 			}
 
+			.input-group{
+				// width: 40%;
+				text-align: right;
+				input{
+					width: 100%;
+					text-align: center;
+					border: 0;
+					padding: 0;
+					box-shadow: none;
+				}
+				a{
+					position: absolute;
+					text-align: center;
+					top: 0.25em;
+					// padding: 10% 5%;
+					left: -0.5em;
+					width: 5%;
+					height: 80%;
+					z-index: 4;
+					line-height: 1em;
+				}
+				.quantity-right-plus{
+					right: 1em;
+					left: auto;
+				}
+			}
 			@media screen and (max-width: #{$screen-xs - 1}) {
 				line-height: 2em;
 				height: auto;
@@ -37,17 +63,19 @@
 				letter-spacing: 0.1em;
 				position: relative;
 				border-top: 1px dashed #999;
+				&.summary{
+					text-align: center;
+				}
 
 				&:before{
 					position: absolute;
 					left: 1em;
 					content: attr(title);
 				}
-
-				input{
-					width: 25%;
-					text-align: right;
+				.input-group{
+					width: 40%;
 				}
+
 				.tooltip{
 					display: none!important;
 				}

@@ -20,8 +20,8 @@ app.partial.cart2 = function(){
 
 	});
 
-	if($('#content.cart1').length){
-		$('#container').trigger('page:update:cart1', null);
+	if($('#content.cart2').length){
+		$('#container').trigger('page:update:cart2', null);
 	}
 
 

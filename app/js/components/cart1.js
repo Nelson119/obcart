@@ -393,6 +393,33 @@ app.partial.cart1 = function(){
 		}).tooltip(); 
 
 
+		var quantitiy=0;
+	   	$('.quantity-group a').click(function(e){
+
+			// Stop acting like a button
+			e.preventDefault();
+	        e.stopPropagation();
+			// Get the field name
+			var $input = $(this).parents('.quantity-group').find('input');
+
+			var quantity = parseInt($input.val());
+
+			var increase = parseInt($(this).attr('data-increase'));
+
+			var max = parseInt($input.attr('max'))
+				,min = parseInt($input.attr('min'));
+
+				// console.log(min, max);
+
+			if(quantity + increase > max || quantity + increase < min){
+				return false;
+			}
+	        
+	        // If is not undefined
+	            
+			$input.val(quantity + increase);
+
+	    });
 		// for(var i = 1; i<=20; i++){
 		// 	var option = document.createElement('option');
 		// 	$(option).attr('value', i).attr('data-qty', i).html(i);
