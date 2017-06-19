@@ -18,7 +18,12 @@ app.partial.cart2 = function(){
 			history.go(-1);
 		});
 
-	}).trigger('page:update:cart2', null);
+	});
+
+	if($('#content.cart1').length){
+		$('#container').trigger('page:update:cart1', null);
+	}
+
 
 
 

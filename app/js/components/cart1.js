@@ -471,7 +471,11 @@ app.partial.cart1 = function(){
 			history.go(-1);
 		});
 
-	}).trigger('page:update:cart1', null);
+	});
+
+	if($('#content.cart1').length){
+		$('#container').trigger('page:update:cart1', null);
+	}
 
 
 	function updateAmount(){
