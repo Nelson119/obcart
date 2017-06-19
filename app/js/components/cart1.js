@@ -393,11 +393,11 @@ app.partial.cart1 = function(){
 		}).tooltip(); 
 
 
-		for(var i = 1; i<=20; i++){
-			var option = document.createElement('option');
-			$(option).attr('value', i).attr('data-qty', i).html(i);
-			$('.qty').append(option);
-		}
+		// for(var i = 1; i<=20; i++){
+		// 	var option = document.createElement('option');
+		// 	$(option).attr('value', i).attr('data-qty', i).html(i);
+		// 	$('.qty').append(option);
+		// }
 
 		$(shipments).each(function(index, element){
 			var option = document.createElement('option');
@@ -408,6 +408,8 @@ app.partial.cart1 = function(){
 				.html(element.label);
 				$('[name=region]').append(option);
 		});
+
+		console.log('region rendered');
 
 		$('[name=region]').selectpicker();
 
