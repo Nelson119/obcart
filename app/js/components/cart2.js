@@ -18,6 +18,10 @@ app.partial.cart2 = function(){
 			history.go(-1);
 		});
 
+		$('#twzipcode').twzipcode();
+		$('#twzipcode2').twzipcode();
+		$('[name=zipcode]').attr('readonly', 'readonly');
+
 	});
 
 	if($('#content.cart2').length){

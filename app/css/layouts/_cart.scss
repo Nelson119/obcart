@@ -208,12 +208,13 @@
 
 
 	.collapse-content{
-		transition: 0.25s;
+		transition: 0.5s;
+		transition-property: height;
 		position: relative;
-		>*{
-			transition: 0.25s;
+		// >*{
+		// 	transition: 0.25s;
 
-		}
+		// }
 		.collapse-button{
 			position: relative;
 			right: 0;
@@ -223,6 +224,13 @@
 			height: 3em;
 			padding: 0 2em;
 
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				background: none;
+				width: 100%;
+				padding: 0;
+				top: 0;
+				margin: 0;
+			}
 			a{
 				height: 3em;
 				line-height: 0.1em;
@@ -231,13 +239,11 @@
 			}
 		}
 		&.collapsed{
-			background: #ddd;
-			margin: 10px -15px 20px;
 			.collapse-button{
 				background: none;
 				a{
-					// transform: rotateZ(-180deg) rotateX(-180deg) rotateY(-180deg);
-					border: 1px solid #eee;
+					transform: rotateX(-180deg) rotateY(-180deg);
+					// border: 1px solid #eee;
 					border-radius: 30%;
 				}
 			}
@@ -245,6 +251,9 @@
 				display: inline-block;
 				position: relative;
 				margin: 20px;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					margin: 0.2rem;
+				}
 				>*{
 					display:none;
 				}
@@ -269,6 +278,12 @@
 					bottom: -0.5em;
 					text-shadow: 0 0 2px #999;
 					line-height: 1em;
+					border: 0;
+					@media screen and (max-width: #{$screen-xs - 1}) {
+						&:before{
+							content: '';
+						}
+					}
 					.qty{
 						height: auto;
 						width: 2em;
@@ -280,11 +295,49 @@
 							
 						// background: #fefefe;
 						border-radius: 50%;
+						@media screen and (max-width: #{$screen-xs - 1}) {
+							text-align:center;
+						}
 					}
 				}
 			}
 			.shipment, .list-head{
 				display:none;
+			}
+		}
+	}
+
+
+	.shipment-form{
+		line-height: 3em;
+
+		select{
+			border: 0;
+			&:focus{
+				outline: none;
+			}
+		}
+		.vertical-middle{
+			&:before{
+				margin-left: -0.3em;
+			}
+		}
+		input{
+			width: 100%;
+			&[name=zipcode]{
+				width: 3em;
+				text-align: center;
+				height: 1.8em;
+				border: 0;
+				&:focus{
+					outline: none;
+				}
+			}
+		}
+		input[type="radio"], input[type="checkbox"]{
+			width: 1em;
+			&:focus{
+				outline: none;
 			}
 		}
 	}

@@ -8,7 +8,8 @@
     "detectizr": "^2.2.0",
     "gsap": "^1.19.1",
     "lodash": "^4.17.4",
-    "bootstrap-select": "^1.12.2"
+    "bootstrap-select": "^1.12.2",
+    "jquery-TWzipcode": "*"
   },
   "overrides": {
     "bootstrap-sass": {
