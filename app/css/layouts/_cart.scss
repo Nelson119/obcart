@@ -3,6 +3,7 @@
 		margin: 1.5em -15px 0.5em;
 	}
 	.list-item{
+
 		img{
 			max-width: 100%;
 		}
@@ -15,16 +16,49 @@
 				width: 20em; 
 				overflow: hidden;
 				text-overflow: ellipsis; 
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					width: auto;
+					overflow: auto;
+					text-overflow: auto; 
+					white-space: normal;
+				}
 
 				& ~.tooltip{
 					top: -50%!important;
 					opacity: 0.75;
 				}
 			}
+
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				line-height: 2em;
+				height: auto;
+				text-align: right;
+				letter-spacing: 0.1em;
+				position: relative;
+				border-top: 1px dashed #999;
+
+				&:before{
+					position: absolute;
+					left: 1em;
+					content: attr(title);
+				}
+
+				input{
+					width: 25%;
+					text-align: right;
+				}
+				.tooltip{
+					display: none!important;
+				}
+				&.image{
+					border-top: 0;
+					text-align: center;
+				}
+			}
 		}
 		.money{
 
-			font-family: times ro, segoe ui;
+			// font-family: times ro, segoe ui;
 		}
 	}
 	.shipment-and-payment{
@@ -137,10 +171,43 @@
 
 
 	.collapse-content{
+		transition: 0.25s;
+		position: relative;
+		>*{
+			transition: 0.25s;
+
+		}
+		.collapse-button{
+			position: relative;
+			right: 0;
+			top: 1em;
+			background: #ddd;
+			width: calc(100% + 30px);
+			height: 3em;
+			padding: 0 2em;
+
+			a{
+				height: 3em;
+				line-height: 0.1em;
+				padding: 1em;
+				width: 3em;
+			}
+		}
 		&.collapsed{
+			background: #ddd;
+			margin: 10px -15px 20px;
+			.collapse-button{
+				background: none;
+				a{
+					// transform: rotateZ(-180deg) rotateX(-180deg) rotateY(-180deg);
+					border: 1px solid #eee;
+					border-radius: 30%;
+				}
+			}
 			.list-item{
 				display: inline-block;
 				position: relative;
+				margin: 20px;
 				>*{
 					display:none;
 				}
@@ -154,24 +221,27 @@
 				>.collapsed-image{
 					img{
 						width: auto;
-						max-width: 120px;
+						max-width: 75px;
 					}
 					border: 1px solid #999;
 				}
 				>.collapsed-qty{
+					font-size: 0.75em;
 					position: absolute;
-					right: -1em;
-					bottom: -1em;
+					right: -0.5em;
+					bottom: -0.5em;
 					text-shadow: 0 0 2px #999;
 					line-height: 1em;
 					.qty{
 						height: auto;
-						width: 3em;
-						height: 3em;
-						line-height: 3em;
-						border: 1px solid #fb060c;
+						width: 2em;
+						height: 2em;
+						line-height: 2em;
+						// border: 1px solid #fb060c;
+						background: #ff7272;
+						color: #eee;
 							
-						background: #fefefe;
+						// background: #fefefe;
 						border-radius: 50%;
 					}
 				}

@@ -10,7 +10,13 @@ app.partial.cart2 = function(){
 
 	var container = $('#container'), page = {path: 'cart2'};
 	container.on('page:update:cart2' , function(page, menu){
+		$('.collapse-button a').on('click', function(){
+			$('i', this).toggleClass('fa-compress').parents('.collapse-content').toggleClass('collapsed');
+		});
 
+		$('#btnBack').on('click', function(){
+			history.go(-1);
+		})
 
 	}).trigger('page:update:cart2', null);
 

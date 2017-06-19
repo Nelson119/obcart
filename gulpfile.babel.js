@@ -63,7 +63,7 @@ gulp.task('components', () => {
   gulp.src('app/**/*.html')
     .pipe($.useref({searchPath: ['', '.tmp', 'app/**']}))
     // .pipe($.debug())
-    // .pipe($.if(/\.js$/, $.debug()))
+    .pipe($.if(/\.css$/, $.debug()))
     .pipe($.if(/\.js$/, $.uglify()))
     .pipe($.if(/\.html$/, $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist/')) ;
