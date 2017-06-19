@@ -43,7 +43,6 @@
   },
   "dependencies": {
     "babel-register": "^6.11.6",
-    "gulp-debug": "^3.1.0",
     "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.3.0",
     "gulp-path": "^3.0.3",
