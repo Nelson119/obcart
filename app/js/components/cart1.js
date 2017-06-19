@@ -387,7 +387,6 @@ app.partial.cart1 = function(){
 
 	var container = $('#container'), page = {path: 'cart1'};
 	container.on('page:update:cart1' , function(page, menu){
-
 	    $('[data-toggle="tooltip"]').each(function(){
 	    	$(this).attr('title', $(this).html());
 		}).tooltip(); 
@@ -497,6 +496,7 @@ app.partial.cart1 = function(){
 		$('#btnBack').on('click', function(){
 			history.go(-1);
 		});
+		TweenMax.set('html, body', {scrollTop: 0});
 
 	});
 
