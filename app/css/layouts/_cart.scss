@@ -133,7 +133,7 @@
 	hr{
 		border-color: #999; 
 		@media screen and (max-width: #{$screen-xs - 1}) {
-			border: 0.15em solid #0e0e0e;
+			border-top: 0.15em solid #0e0e0e;
 		}
 	}
 	.fa-trash{
