@@ -335,6 +335,15 @@
 			}
 			>*{
 				max-width: 98%;
+				@media screen and (max-width: #{$screen-xs - 1}) {
+					max-width: 96%;
+				}
+			}
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				
+				&:before{
+					display: none;
+				}
 			}
 		}
 		input{
@@ -413,6 +422,24 @@
 				transition-duration:0.25;
 			}
 		}
+	}
+
+	#shipmentForm,#shipmentRemark{
+		border-left: 1px dashed #999;
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			border-left: 0;
+		}	
+	}
+	#shipmentForm{
+		@media screen and (max-width: #{$screen-xs - 1}) {
+			border-top: 1px dashed #999;
+		}	
+	}
+
+	#receiptForm{
+		padding-top: 1em;
+		margin-top: 1em;
+		border-top: 1px dashed #999;
 	}
 
 	.nowrap{
