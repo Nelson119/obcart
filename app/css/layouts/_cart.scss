@@ -327,7 +327,7 @@
 		}
 		.vertical-middle, .vertical-top{
 			&:before{
-				// margin-left: -0.45em;
+				margin-left: -0.45em;
 				@media screen and (max-width: #{$screen-xs - 1}) {
 				margin-left: 0em;
 				}
