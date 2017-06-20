@@ -316,7 +316,7 @@
 	}
 
 
-	.shipment-form{
+	.total-form{
 		line-height: 3em;
 
 		select{
@@ -338,6 +338,7 @@
 				text-align: center;
 				height: 1.8em;
 				border: 0;
+				z-index: 5;
 			}
 			&:focus{
 				outline: none;
