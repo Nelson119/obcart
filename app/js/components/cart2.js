@@ -18,11 +18,22 @@ app.partial.cart2 = function(){
 			history.go(-1);
 		});
 
-		$('#twzipcode').twzipcode();
-		$('#twzipcode2').twzipcode();
-		$('#twzipcode3').twzipcode();
-		$('#twzipcode4').twzipcode();
-		$('[name=zipcode]').attr('readonly', 'readonly');
+		$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').twzipcode(). addClass('row');
+		$('[name=district]');
+
+		$('[name=county]').selectpicker().on('change', function(){
+			$(this).parents('.row').find('[name=district]').selectpicker('destroy').selectpicker();
+			$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').find('.btn-group').addClass('col-xs-4 col-sm-4');
+		}).trigger('change');
+
+		$('[name=zipcode]').attr('readonly', 'readonly').each(function(i,d){
+			// var $clone = $(this).clone();
+			// $(this).parents('.row').find('.btn-group:first').clone().html('').appendTo($(this).parents('.row')).append($clone);
+			// $(this).on('change', function(){
+			// 	console.log($(this).val())
+			// 	$clone.val($(this).val());
+			// });
+		});
 
 		$('#sameas1').on('change', function(e){
 			var ischecked = $(this).is(':checked');
