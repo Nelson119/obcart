@@ -18,12 +18,15 @@ app.partial.cart2 = function(){
 			history.go(-1);
 		});
 
-		$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').twzipcode(). addClass('row');
+		$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').twzipcode();
 		$('[name=district]');
 
 		$('[name=county]').selectpicker().on('change', function(){
 			$(this).parents('.row').find('[name=district]').selectpicker('destroy').selectpicker();
-			$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').find('.btn-group').addClass('col-xs-4 col-sm-4');
+			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode3, #twzipcode4').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-4 col-sm-4');
+			$('#twzipcode3, #twzipcode4').find('[name=county]').parents('.btn-group').addClass('col-xs-4 col-sm-2');
 		}).trigger('change');
 
 		$('[name=zipcode]').attr('readonly', 'readonly').each(function(i,d){
