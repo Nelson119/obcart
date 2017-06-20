@@ -34,6 +34,7 @@ app.partial.cart2 = function(){
 			// 	$clone.val($(this).val());
 			// });
 		});
+		$('.donate-type').selectpicker();
 
 		$('#sameas1').on('change', function(e){
 			var ischecked = $(this).is(':checked');
