@@ -339,7 +339,7 @@
 				text-align: center;
 				height: 1.8em;
 				border: 0;
-				z-index: 5;
+				visibility: hidden;
 			}
 			&:focus{
 				outline: none;
