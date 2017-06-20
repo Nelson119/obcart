@@ -32,9 +32,15 @@ html{
 		min-height: 100vh;
 	}
 	body{
-		@media screen and (max-width: #{$screen-md - 1}) {
+		@media screen and (max-width: #{$screen-sm - 1}) {
 			font-size: 16px;
-			font-size: vw(16, 320);
+			font-size: vwxs(16, 320);
 		}		
+	}
+	::-moz-selection,
+	::selection{
+		background: rgba(0,0,0,0.2);
+		color: inherit;
+		text-shadow: none;
 	}
 }

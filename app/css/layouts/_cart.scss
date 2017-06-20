@@ -236,15 +236,23 @@
 				line-height: 0.1em;
 				padding: 1em;
 				width: 3em;
+				transform: scale(1.2);
+				&:hover{
+					transform: scale(1);
+				}
 			}
 		}
 		&.collapsed{
 			.collapse-button{
 				background: none;
 				a{
-					transform: rotateX(-180deg) rotateY(-180deg);
+					// transform: rotateX(-180deg) rotateY(-180deg);
 					// border: 1px solid #eee;
 					border-radius: 30%;
+					transform: scale(1);
+					&:hover{
+						transform: scale(1.2);
+					}
 				}
 			}
 			.list-item{
@@ -317,27 +325,80 @@
 				outline: none;
 			}
 		}
-		.vertical-middle{
+		.vertical-middle, .vertical-top{
 			&:before{
-				margin-left: -0.3em;
+				margin-left: -0.45em;
 			}
 		}
 		input{
 			width: 100%;
+			transition-duration: 0.25s;
 			&[name=zipcode]{
-				width: 3em;
+				width: 4em;
 				text-align: center;
 				height: 1.8em;
 				border: 0;
-				&:focus{
-					outline: none;
-				}
+			}
+			&:focus{
+				outline: none;
+				box-shadow: none;
+				border-color: rgba(0,0,0, 0.7);
+				border-width: 1px;
+				border-style: solid;
+				border-radius: 0;
 			}
 		}
 		input[type="radio"], input[type="checkbox"]{
 			width: 1em;
-			&:focus{
-				outline: none;
+		}
+
+		.form-labels{
+			white-space: nowrap;
+		}
+
+		label{
+			font-weight: normal;
+			color: #333;
+		}
+
+		.hint{
+			color: #8b8b8b;
+			line-height: 1.5em;
+			height: 1.5em;
+			display: inline-block;
+			@media screen and (max-width: #{$screen-xs - 1}) {
+				height: auto;
+			}
+		}
+		#receiptForm{
+			line-height: 2em;
+		}
+	}
+
+	.form-control{
+		box-shadow: none;
+	}
+
+	#collapse-donation{
+		height: 12em;
+		&.collapsing{
+			height: 1em;
+			opacity: 0;
+		}
+	}
+
+	#collapse-receipt{
+		height: 25em;
+		&.collapsing{
+			height: 1em;
+			opacity: 0;
+		}
+		.receipt-carrier{
+			height: 13em;
+			&.collapsing{
+				height: 0;
+				opacity: 0;
+				transition-duration:0.25;
 			}
 		}
 	}

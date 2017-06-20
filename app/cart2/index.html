@@ -233,22 +233,23 @@
         </aside>
 
         <aside class="row shipment-form">
-          <form class="col-sm-6">
+          <hr/>
+
+          <!-- 訂購人資料 -->
+          <aside class="col-sm-6 col-xs-12" id="paymentForm">
             <aside class="row">
-              <aside class="col-sm-12 col-xs-12 vertical-middle">
-                
-              </aside>
-              <aside class="col-sm-2 hidden-xs vertical-middle">姓名</aside>
-              <aside class="col-sm-10 col-xs-6 vertical-middle">
+              <aside class="col-xs-12 text-center"><h4>訂購人資訊</h4></aside>
+              <aside class="col-sm-2 hidden-xs vertical-middle text-right form-labels">姓名</aside>
+              <aside class="col-sm-4 col-xs-6 vertical-middle form-fields">
                 <input class="form-control" placeholder="請填姓名">
               </aside>
-              <aside class="col-sm-2 hidden-xs vertical-middle">手機</aside>
-              <aside class="col-sm-10 col-xs-6 vertical-middle">
+              <aside class="col-sm-2 hidden-xs vertical-middle text-right form-labels">手機</aside>
+              <aside class="col-sm-4 col-xs-6 vertical-middle form-fields">
                 <input class="form-control" placeholder="請填手機號碼">
               </aside>
-              <aside class="col-sm-2 hidden-xs vertical-middle">地址</aside>
+              <aside class="col-sm-2 hidden-xs vertical-middle text-right form-labels">地址</aside>
 
-              <aside class="col-sm-10 col-xs-12">
+              <aside class="col-sm-10 col-xs-12 form-fields form-fields">
                 <aside id="twzipcode">
                     <span data-role="payment-county" data-value="臺北市"></span>
                     <span data-role="payment-district" data-value="信義區"></span>
@@ -256,26 +257,31 @@
                 </aside>
                 <input class="form-control" name="address" placeholder="請填街道門牌">
               </aside>
-            </aside>
-          </form>
-
-          <form class="col-sm-6">
-            <aside class="row">
-              <aside class="col-sm-10 col-sm-offset-2 col-xs-10 col-xs-offset-2  vertical-middle">
-                <input type="checkbox" class="" placeholder="" id="sameas">
-                <label for="sameas">同購買人資訊請打勾</label>
+              <aside class="col-sm-10 col-sm-offset-2 col-xs-12  vertical-middle form-fields">                
+                <label for="sameas1" class="fontsize-12 fontsize-sm-30"><input type="checkbox" id="sameas1">收件人資訊同訂購人資料請打勾</label>
               </aside>
-              <aside class="col-sm-2 hidden-xs vertical-middle">姓名</aside>
-              <aside class="col-sm-10 col-xs-6 vertical-middle">
+            </aside>
+          </aside>
+          <!-- ./訂購人資料 -->
+
+          <!-- 收件人資訊 -->
+          <aside class="col-sm-6 col-xs-12" id="shipmentForm">
+            <aside class="row">
+
+              <aside class="col-xs-12 text-center"><h4>收件人資訊</h4></aside>
+
+              <aside class="col-sm-2 hidden-xs vertical-middle text-right form-labels">姓名</aside>
+              <aside class="col-sm-4 col-xs-6 vertical-middle form-fields">
                 <input class="form-control" placeholder="請填姓名">
               </aside>
-              <aside class="col-sm-2 hidden-xs vertical-middle">手機</aside>
-              <aside class="col-sm-10 col-xs-6 vertical-middle">
+
+              <aside class="col-sm-2 hidden-xs vertical-middle text-right form-labels">手機</aside>
+              <aside class="col-sm-4 col-xs-6 vertical-middle form-fields">
                 <input class="form-control" placeholder="請填手機號碼">
               </aside>
-              <aside class="col-sm-2 hidden-xs vertical-middle">地址</aside>
 
-              <aside class="col-sm-10 col-xs-12">
+              <aside class="col-sm-2 hidden-xs vertical-middle text-right form-labels">地址</aside>
+              <aside class="col-sm-10 col-xs-12 form-fields">
                 <aside id="twzipcode2">
                     <span data-role="shipment-county" data-value="臺北市"></span>
                     <span data-role="shipment-district" data-value="信義區"></span>
@@ -283,14 +289,274 @@
                 </aside>
                 <input class="form-control" name="address" placeholder="請填街道門牌">
               </aside>
+
+              <aside class="col-sm-10 col-sm-offset-2 col-xs-12 vertical-middle">
+                <span class="hint fontsize-12 fontsize-sm-30">因採黑貓宅急便配送，故不提供寄送郵政信箱或存局候領服務，將無法寄達並自動取消訂單</span>
+              </aside>
             </aside>
-          </form>
+          </aside>
+          <!-- ./收件人資訊 -->
+
+          <!-- 配送備註 -->
+          <aside class="col-sm-6 col-sm-offset-6 col-xs-12">
+            <aside class="row">
+              <aside class="col-sm-2 hidden-xs vertical-middle text-right">配送備註</aside>
+              <aside class="col-sm-10 col-xs-12 vertical-middle">
+                <input class="form-control" placeholder="請填配送備註">
+              </aside>
+            </aside>
+          </aside>
+          <!-- ./配送備註 -->
+
+          <!-- 發票資訊 -->
+          <aside class="col-xs-12" id="receiptForm">
+
+            <h4 class="col-xs-12 text-center">發票資訊</h4>
+
+            <!-- 捐贈發票 -->
+            <aside class="row">
+
+              <aside class="col-sm-2 col-xs-12 vertical-bottom">                
+                <label for="receiptMethod1"><input type="radio" value="collapse-donation" name="receiptMethod" id="receiptMethod1">捐贈發票</label>
+              </aside>
+
+              <aside class="col-sm-10 col-sm-offset-0 col-xs-11 col-xs-offset-1 vertical-middle">
+                <span class="hint fontsize-12 fontsize-sm-30"> 隨手捐發票， OB嚴選邀您一同獻愛心。</span>
+              </aside>
+
+              <!-- 捐贈發票表單內容 -->
+              <aside id="collapse-donation" class="receipt-method-collapse collapsing">
+                
+                <!-- 捐贈單位 -->
+                <aside class="col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+                  <aside class="row callapsed-5em">
+
+                    <aside class="col-sm-3 col-xs-12 vertical-middle">                      
+                      <label for="receiptMethod1Type1">
+                        <input type="radio" checked="checked" name="receiptMethod1Type" value="SelectDonateCode"  id="receiptMethod1Type1">捐贈單位：
+                      </label>
+                    </aside>
+                  
+                    <aside class="col-sm-9 col-xs-12 vertical-middle">
+                      <select class="form-control donate-type" id="SelectDonateCode" name="SelectDonateCode" disabled="disabled" readonly="readonly">
+                        <option value="7505">中華社會福利聯合勸募協會</option>
+                        <option value="8957282">財團法人流浪動物之家基金會</option>
+                        <option value="9118595">財團法人勵馨社會福利事業基金會</option>
+                        <option value="889881">財團法人雅文兒童聽語文教基金會</option>
+                        <option value="86888">財團法人麥當勞叔叔之家兒童慈善基金會</option>
+                        <option value="529529">社團法人中華民國動物福利環保協進會</option>
+                        <option value="8585">財團法人台灣兒童暨家庭扶助基金會</option>
+                        <option value="5299">社團法人台灣導盲犬協會</option>
+                        <option value="919">創世基金會</option>
+                        <option value="880">財團法人瑪利亞社會福利基金會</option>
+                      </select>
+                    </aside>
+                  </aside>
+                </aside>
+                <!-- ./捐贈單位： -->
+                <span class="col-xs-12">&nbsp;</span>
+                <!-- 社福團體愛心碼 -->
+                <aside class="col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+                  <aside class="row">
+                    <aside class="col-sm-3 col-xs-12 vertical-middle">                      
+                      <label for="receiptMethod1Type2">
+                        <input type="radio" name="receiptMethod1Type" value="OtherDonateCode"  id="receiptMethod1Type2">其他社福團體愛心碼：
+                      </label>
+                    </aside>
+                    <aside class="col-sm-9 col-xs-12 vertical-middle fontsize-12 fontsize-sm-30">
+                      <input id="OtherDonateCode" class="form-control donate-type" placeholder="(限數字)" disabled="disabled" readonly="readonly">
+                      <a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/XcaOrgPreserveCodeQuery/XcaOrgPreserveCodeQuery?CSRT=4350550699150711492" target="_blank" style="color:#F36;">查詢社福團體愛心碼索引</a>
+                    </aside>
+                  </aside>
+                </aside>
+                <!-- ./社福團體愛心碼 -->
+              </aside>
+              
+              <!-- ./捐贈發票表單內容 -->
+
+
+            </aside>
+            <!-- ./捐贈發票 -->
+
+
+
+            <!-- 電子發票 -->
+            <aside class="row">
+
+              <aside class="col-sm-2 col-xs-12 vertical-bottom">
+                <label for="receiptMethod2"><input type="radio" value="collapse-receipt" name="receiptMethod" id="receiptMethod2">電子發票</label>
+                
+              </aside>
+
+              <aside class="col-sm-10 col-sm-offset-0 col-xs-11 col-xs-offset-1 vertical-middle">
+                <span class="hint fontsize-12 fontsize-sm-30"> 依統一發票使用辦法規定：個人戶(二聯式)發票一經開立，無法任意更改或改開公司戶(三聯式)發票。</span>
+              </aside>
+
+              <!-- 電子發票表單內容 -->
+              <aside id="collapse-receipt" class="receipt-method-collapse collapsing">
+                <aside class="col-sm-10 col-sm-offset-2 col-xs-11 col-xs-offset-1">
+
+                  <!-- 會員載具 -->
+                  <aside class="row">
+
+                    <aside class="col-sm-3 col-xs-12 vertical-middle">                      
+                      <label for="receiptMethod2Type1"><input type="radio" checked="checked" name="receiptMethod2Type" value="receipt-member-carrier" id="receiptMethod2Type1">OB嚴選會員載具：</label>
+                    </aside>
+
+                    <!-- 會員載具表單內容 -->
+                    <aside id="receipt-member-carrier" class="receipt-carrier">
+                      <aside class="col-sm-10 col-xs-12 vertical-middle fontsize-12 fontsize-sm-30">
+                        使用OB嚴選會員帳號為載具，由OB嚴選自動為您兌獎，中獎後主動通知您，詳見<a target="_blank" href="http://www.obdesign.com.tw/QAinfo/QAinfo-3.html" style="color: #B97A57;">「會員載具」</a>說明。
+                      </aside>
+
+                      <aside class="col-xs-12">
+                        <aside class="vertical-middle">                
+                          <label for="sameas2" class="fontsize-12 fontsize-sm-30"><input type="checkbox" value="member-carrier-same-as-buyer" id="sameas2">會員載具同訂購人資料請打勾</label>
+                        </aside>
+                        <!--姓名電話地址-->
+                        <aside id="member-carrier-same-as-buyer">
+                          <aside class="row">
+                            <aside class="col-sm-2 hidden-xs vertical-middle text-right">姓名</aside>
+                            <aside class="col-sm-4 col-xs-6 vertical-middle">
+                              <input class="form-control" placeholder="請填姓名">
+                            </aside>
+
+                            <aside class="col-sm-2 hidden-xs vertical-middle text-right">手機</aside>
+                            <aside class="col-sm-4 col-xs-6 vertical-middle">
+                              <input class="form-control" placeholder="請填手機號碼">
+                            </aside>
+                          </aside>
+                          <aside class="row">
+
+                            <aside class="col-sm-2 hidden-xs vertical-middle text-right">地址</aside>
+                            <aside class="col-sm-10 col-xs-12">
+                              <aside id="twzipcode3">
+                                  <span data-role="member-county" data-value="臺北市"></span>
+                                  <span data-role="member-district" data-value="信義區"></span>
+                                  <span data-role="member-zipcode" data-value="110"></span>
+                              </aside>
+                              <input class="form-control" name="address" placeholder="請填街道門牌">
+                            </aside>
+                          </aside>
+                        </aside>
+                        <!--./姓名電話地址-->
+                      </aside>
+                    </aside>
+                    <!-- ./會員載具表單內容 -->
+
+                  </aside>
+                  <!-- ./會員載具 -->
+
+                  <!-- 共通性載具 -->
+                  <aside class="row">
+
+                    <aside class="col-sm-3 col-xs-12 vertical-middle">
+                      
+                      <label for="receiptMethod2Type2"><input type="radio" name="receiptMethod2Type" value="receipt-common-carrier"  id="receiptMethod2Type2">共通性載具：</label>
+                    </aside>
+
+                    <!-- 共通性載具表單內容 -->
+                    <aside id="receipt-common-carrier" class="receipt-carrier collapsing">
+                      <aside class="col-xs-12">
+                        <aside class="row">
+                          <aside class="col-sm-2 hidden-xs vertical-middle text-right">請填手機載具：</aside>
+                          <aside class="col-sm-4 col-xs-12 vertical-middle">
+                            <input class="form-control" placeholder="請填手機載具">
+                          </aside>
+                          <aside class="col-sm-4 col-xs-12 vertical-middle">
+                            <a class="fontsize-12 fontsize-sm-30" href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/GeneralCarrier/generalCarrier?mp=1" target="_blank" style="color:#F36;">您需持有手機載具，詳見說明。 </a>
+                          </aside>
+
+                          <aside class="col-sm-2 hidden-xs vertical-middle text-right">再確認手機載具：</aside>
+                          <aside class="col-sm-4 col-xs-12 vertical-middle">
+                            <input class="form-control" placeholder="再確認手機載具">
+                          </aside>
+                        </aside>
+                      </aside>
+                    </aside>
+                    <!-- ./共通性載具表單內容 -->
+
+                  </aside>
+                  <!-- ./共通性載具 -->
+
+                  <!-- 三聯式發票 -->
+                  <aside class="row">
+                    <aside class="col-sm-3 col-xs-12 vertical-middle">
+                      
+                      <label for="receiptMethod2Type3"><input type="radio" name="receiptMethod2Type" value="receipt-parts-carrier" id="receiptMethod2Type3">三聯式發票：</label>
+                    </aside>
+
+                    <!-- 三聯式發票表單內容 -->
+                    <aside id="receipt-parts-carrier" class="receipt-carrier collapsing">
+                      <aside class="col-xs-12">
+                        <aside class="row">
+                          <aside class="col-sm-2 hidden-xs vertical-middle text-right">統一編號：</aside>
+                          <aside class="col-sm-4 col-xs-12 vertical-middle">
+                            <input class="form-control" placeholder="統一編號">
+                          </aside>
+
+                          <aside class="col-sm-2 hidden-xs vertical-middle text-right">發票抬頭：</aside>
+                          <aside class="col-sm-4 col-xs-12 vertical-middle">
+                            <input class="form-control" placeholder=" 發票抬頭">
+                          </aside>
+                        </aside>
+                      </aside>
+                      <aside class="col-xs-12">
+                        <aside class="vertical-middle">                
+                          <label for="sameas3" class="fontsize-12 fontsize-sm-30"><input type="checkbox" value="parts-carrier-same-as-buyer" id="sameas3">三聯式發票同訂購人資料請打勾</label>
+                        </aside>
+                        <!--姓名電話地址-->
+                        <aside id="parts-carrier-same-as-buyer">
+                          <aside class="row">
+                            <aside class="col-sm-2 hidden-xs vertical-middle text-right">姓名</aside>
+                            <aside class="col-sm-4 col-xs-6 vertical-middle">
+                              <input class="form-control" placeholder="請填姓名">
+                            </aside>
+
+                            <aside class="col-sm-2 hidden-xs vertical-middle text-right">手機</aside>
+                            <aside class="col-sm-4 col-xs-6 vertical-middle">
+                              <input class="form-control" placeholder="請填手機號碼">
+                            </aside>
+                          </aside>
+                          <aside class="row">
+
+                            <aside class="col-sm-2 hidden-xs vertical-middle text-right">地址</aside>
+                            <aside class="col-sm-10 col-xs-12">
+                              <aside id="twzipcode4">
+                                  <span data-role="receipt-county" data-value="臺北市"></span>
+                                  <span data-role="receipt-district" data-value="信義區"></span>
+                                  <span data-role="receipt-zipcode" data-value="110"></span>
+                              </aside>
+                              <input class="form-control" name="address" placeholder="請填街道門牌">
+                            </aside>
+                          </aside>
+                        </aside>
+                        <!--./姓名電話地址-->
+                      </aside>
+                    </aside>
+                    <!-- ./三聯式發票表單內容 -->
+
+                  </aside>
+                  <!-- ./三聯式發票 -->
+
+
+                </aside>
+              </aside>
+              <!-- ./電子發票表單內容 -->
+
+
+            </aside>
+            <!-- ./電子發票 -->
+
+
+          </aside>
         </aside>
+        <!-- ./發票資訊 -->
 
         <aside class="row text-center ">
-          <span class="col-xs-offset-8 col-xs-4 text-right buttons">
+          <span class="col-xs-12 col-sm-offset-8 col-sm-4 text-center buttons vertical-middle">
             <aside class="row">
-              <button class="btn-default btn" id="btnBack">上一步</button>
+              <button class="btn-default btn" id="btnBack">修改訂購內同 或 重新選擇運送方式</button>
               <a data-href="../cart2" class="btn-default btn" id="btnNext">確認送出</a>
             </aside>
           </span>
