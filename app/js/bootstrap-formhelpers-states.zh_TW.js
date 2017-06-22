@@ -1,4 +1,10 @@
-/* ==========================================================
+'use strict';
+/*eslint-disable new-cap, no-unused-vars,
+    no-use-before-define, no-trailing-spaces, space-infix-ops, comma-spacing,
+    no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
+    key-spacing ,curly, no-shadow, no-return-assign, no-redeclare, no-unused-vars,
+    eqeqeq, no-extend-native, quotes , no-inner-declarations*/
+    /* ==========================================================
  * bootstrap-formhelpers-states.en_US.js
  * https://github.com/vlamanna/BootstrapFormHelpers
  * ==========================================================
@@ -3841,7 +3847,7 @@ var BFHStatesList = {
     '98' : {'code':'WLT','name':'Wiltshire'},
     '99' : {'code':'WORCS','name':'Worcestershire'},
     '100' : {'code':'WRX','name':'Wrexham'}
-  },,
+  },
   'UM':{
     '1' : {'code':'BI','name':'Baker Island'},
     '2' : {'code':'HI','name':'Howland Island'},
