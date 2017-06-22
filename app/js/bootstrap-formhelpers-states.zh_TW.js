@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 /*eslint-disable new-cap, no-unused-vars,
     no-use-before-define, no-trailing-spaces, space-infix-ops, comma-spacing,
     no-mixed-spaces-and-tabs, no-multi-spaces, camelcase, no-loop-func,no-empty,
