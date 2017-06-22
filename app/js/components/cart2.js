@@ -10,6 +10,10 @@ app.partial.cart2 = function(){
 
 	var container = $('#container'), page = {path: 'cart2'};
 	container.on('page:update:cart2' , function(page, menu){
+	    $('[data-toggle="tooltip"]').each(function(){
+	    	$(this).attr('title', $(this).html());
+		}).tooltip(); 
+
 		$('.collapse-button a').on('click', function(){
 			$('i', this).toggleClass('fa-compress').parents('.collapse-content').toggleClass('collapsed');
 		});
@@ -17,11 +21,21 @@ app.partial.cart2 = function(){
 		$('#btnBack').on('click', function(){
 			history.go(-1);
 		});
-
+		$('select option').each(function(){
+			// if($(this).html().indexOf('臺') != -1){
+			// 	$(this).html($(this).html().replace('臺', '台'));
+			// 	$(this).val($(this).val().replace('臺', '台'));
+			// }
+		});
 		$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').twzipcode();
-		$('[name=district]');
 
 		$('[name=county]').selectpicker().on('change', function(){
+			// $('select option').each(function(){
+			// 	if($(this).html().indexOf('臺') != -1){
+			// 		$(this).html($(this).html().replace('臺', '台'));
+			// 		$(this).val($(this).val().replace('臺', '台'));
+			// 	}
+			// });
 			$(this).parents('.row').find('[name=district]').selectpicker('destroy').selectpicker();
 			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-6');
 			$('#twzipcode3, #twzipcode4').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
@@ -37,6 +51,7 @@ app.partial.cart2 = function(){
 			// 	$clone.val($(this).val());
 			// });
 		});
+
 		$('.donate-type').selectpicker();
 
 		$('#sameas1').on('change', function(e){
@@ -45,22 +60,27 @@ app.partial.cart2 = function(){
 			var $shipmentForm = $('#shipmentForm');
 			if(ischecked){
 				$paymentForm.removeClass('col-sm-6').addClass('col-sm-12');
+				// 姓名 地址 labal位置不動
 				$('.form-labels', $paymentForm).removeClass('col-sm-2').addClass('col-sm-1');
+				//姓名 縣市下拉 調整
+				$('.form-fields.col-sm-4, .btn-group.col-sm-4', $paymentForm)
+					.removeClass('col-sm-4').addClass('col-sm-5');
+
+				//街道門牌 位置
 				$('.form-fields.col-sm-10.col-sm-offset-2', $paymentForm)
-					.removeClass('col-sm-10').addClass('col-sm-11')
-					.removeClass('col-sm-offset-2').addClass('col-sm-offset-1');
-				$('.form-fields.col-sm-4', $paymentForm).removeClass('col-sm-4').addClass('col-sm-5');
-				$('.form-fields.col-sm-10', $paymentForm).removeClass('col-sm-10').addClass('col-sm-11');
-				$shipmentForm.addClass('hide');
+					.removeClass('col-sm-10 col-sm-offset-2').addClass('col-sm-11 col-sm-offset-1');
+				$shipmentForm.addClass('fade');
 			} else{
 				$paymentForm.addClass('col-sm-6').removeClass('col-sm-12');
+				// 姓名 地址 labal位置不動
 				$('.form-labels', $paymentForm).addClass('col-sm-2').removeClass('col-sm-1');
+				//姓名 縣市下拉 調整
+				$('.form-fields.col-sm-5, .btn-group.col-sm-5', $paymentForm)
+					.addClass('col-sm-4').removeClass('col-sm-5');
+				//街道門牌 位置
 				$('.form-fields.col-sm-11.col-sm-offset-1', $paymentForm)
-					.addClass('col-sm-10').removeClass('col-sm-11')
-					.addClass('col-sm-offset-2').removeClass('col-sm-offset-1');
-				$('.form-fields.col-sm-5', $paymentForm).addClass('col-sm-4').removeClass('col-sm-5');
-				$('.form-fields.col-sm-11', $paymentForm).addClass('col-sm-10').removeClass('col-sm-11');
-				$shipmentForm.removeClass('hide');
+					.addClass('col-sm-10 col-sm-offset-2').removeClass('col-sm-11 col-sm-offset-1');
+				$shipmentForm.removeClass('fade');
 			}
 		});
 

@@ -211,10 +211,10 @@
 		transition: 0.5s;
 		transition-property: height;
 		position: relative;
-		// >*{
-		// 	transition: 0.25s;
-
-		// }
+		letter-spacing: -1em;
+		>*{
+			letter-spacing: 1px;
+		}
 		.collapse-button{
 			position: relative;
 			right: 0;
@@ -261,6 +261,7 @@
 				margin: 20px;
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					margin: 0.2rem;
+					width: 22%;
 				}
 				>*{
 					display:none;
@@ -287,6 +288,7 @@
 					text-shadow: 0 0 2px #999;
 					line-height: 1em;
 					border: 0;
+					z-index: 1;
 					@media screen and (max-width: #{$screen-xs - 1}) {
 						&:before{
 							content: '';
@@ -318,6 +320,7 @@
 
 	.total-form{
 		line-height: 3em;
+		overflow: hidden;
 
 		select{
 			border: 0;
@@ -331,12 +334,6 @@
 				font-size:11px;
 				@media screen and (max-width: #{$screen-xs - 1}) {
 					margin-left: 0em;
-				}
-			}
-			>*{
-				max-width: 98%;
-				@media screen and (max-width: #{$screen-xs - 1}) {
-					max-width: 96%;
 				}
 			}
 			@media screen and (max-width: #{$screen-xs - 1}) {
@@ -393,6 +390,21 @@
 
 		.row{
 			min-height: 45px;
+		}
+
+		#paymentForm{
+			// transition: width 0.3s ease 0s;
+		}
+
+		#shipmentForm{
+			// transition: width 0.3s linear 0s;
+			&.fade{
+				width: 0;
+				height: 0;
+				transition-duration: 0s;
+			// 	position: absolute;
+			// 	right: 0;
+			}
 		}
 	}
 
