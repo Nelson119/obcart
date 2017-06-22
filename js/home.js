@@ -1,0 +1,1 @@
+"use strict";app.partial.home=function(){$("body").addClass("loading-done")};
