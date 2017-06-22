@@ -321,7 +321,24 @@
 	.total-form{
 		line-height: 3em;
 		overflow: hidden;
+		.bfh-selectbox{
+			margin-top:0.5em;
+			height: 2em;
+			line-height: 3em;
+		}
+		#twzipcode,#twzipcode2,#twzipcode3,#twzipcode4{
 
+			line-height: 2em;
+			padding: 0.4em 0;
+			&.hide-children{
+				display: block!important;
+				height: 3.2em;
+				> *{
+					display: none;
+				}
+
+			}
+		}
 		select{
 			border: 0;
 			&:focus{

@@ -21,39 +21,75 @@ app.partial.cart2 = function(){
 		$('#btnBack').on('click', function(){
 			history.go(-1);
 		});
-		$('select option').each(function(){
-			// if($(this).html().indexOf('臺') != -1){
-			// 	$(this).html($(this).html().replace('臺', '台'));
-			// 	$(this).val($(this).val().replace('臺', '台'));
-			// }
-		});
 		$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').twzipcode();
 
 		$('[name=county]').selectpicker().on('change', function(){
-			// $('select option').each(function(){
-			// 	if($(this).html().indexOf('臺') != -1){
-			// 		$(this).html($(this).html().replace('臺', '台'));
-			// 		$(this).val($(this).val().replace('臺', '台'));
-			// 	}
-			// });
 			$(this).parents('.row').find('[name=district]').selectpicker('destroy').selectpicker();
 			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-6');
 			$('#twzipcode3, #twzipcode4').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-4');
+			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-6');
 			$('#twzipcode3, #twzipcode4').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-2');
 		}).trigger('change');
 
-		$('[name=zipcode]').attr('readonly', 'readonly').each(function(i,d){
-			// var $clone = $(this).clone();
-			// $(this).parents('.row').find('.btn-group:first').clone().html('').appendTo($(this).parents('.row')).append($clone);
-			// $(this).on('change', function(){
-			// 	console.log($(this).val())
-			// 	$clone.val($(this).val());
-			// });
-		});
+		
+		$('#countries_states1').on('change.bfhselectbox', function(e){
+			if($('#countries_states1').val() === 'TW' || $('#countries_states1').val() === 'SG'){
+				$('#states1').hide();
+			}else{
+				$('#states1').show();
+			}
+			if($('#countries_states1').val() === 'TW'){
+				$('#twzipcode').removeClass('hide-children');
+			}else{
+				$('#twzipcode').addClass('hide-children');
+			}
+		}).trigger('change.bfhselectbox');
+
+		
+		$('#countries_states2').on('change.bfhselectbox', function(e){
+			if($('#countries_states2').val() === 'TW' || $('#countries_states2').val() === 'SG'){
+				$('#states2').hide();
+			}else{
+				$('#states2').show();
+			}
+			if($('#countries_states2').val() === 'TW'){
+				$('#twzipcode2').removeClass('hide-children');
+			}else{
+				$('#twzipcode2').addClass('hide-children');
+			}
+		}).trigger('change.bfhselectbox');
+
+		
+		$('#countries_states3').on('change.bfhselectbox', function(e){
+			if($('#countries_states3').val() === 'TW' || $('#countries_states3').val() === 'SG'){
+				$('#states3').hide();
+			}else{
+				$('#states3').show();
+			}
+			if($('#countries_states3').val() === 'TW'){
+				$('#twzipcode3').removeClass('hide-children');
+			}else{
+				$('#twzipcode3').addClass('hide-children');
+			}
+		}).trigger('change.bfhselectbox');
+
+		
+		$('#countries_states4').on('change.bfhselectbox', function(e){
+			if($('#countries_states4').val() === 'TW' || $('#countries_states4').val() === 'SG'){
+				$('#states4').hide();
+			}else{
+				$('#states4').show();
+			}
+			if($('#countries_states4').val() === 'TW'){
+				$('#twzipcode4').removeClass('hide-children');
+			}else{
+				$('#twzipcode4').addClass('hide-children');
+			}
+		}).trigger('change.bfhselectbox');
 
 		$('.donate-type').selectpicker();
 
+		//收件人姓名電話地址與購買人相同
 		$('#sameas1').on('change', function(e){
 			var ischecked = $(this).is(':checked');
 			var $paymentForm = $('#paymentForm');
@@ -130,7 +166,7 @@ app.partial.cart2 = function(){
 				$('#' + this.value).removeClass('collapsing');
 			}
 		});
-
+        
 	});
 
 	if($('#content.cart2').length){

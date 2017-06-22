@@ -9,7 +9,8 @@
     "gsap": "^1.19.1",
     "lodash": "^4.17.4",
     "bootstrap-select": "^1.12.2",
-    "jquery-TWzipcode": "*"
+    "jquery-TWzipcode": "*",
+    "bootstrap-formhelpers": "^2.3.0"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -24,6 +25,17 @@
         "less/font-awesome.less",
         "scss/font-awesome.scss",
         "fonts/*"
+      ]
+    },
+    "bootstrap-formhelpers": {
+      "main": [
+        "dist/css/bootstrap-formhelpers.css",
+        "dist/js/bootstrap-formhelpers.js",
+        "js/lang/zh_TW/bootstrap-formhelpers-countries.zh_TW.js"
+      ]
+    },
+    "bootstrap": {
+      "main": [
       ]
     }
   },

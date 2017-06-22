@@ -387,8 +387,8 @@ app.partial.cart1 = function(){
 
 	var container = $('#container'), page = {path: 'cart1'};
 	container.on('page:update:cart1' , function(page, menu){
-	    $('[data-toggle="tooltip"]').each(function(){
-	    	$(this).attr('title', $(this).html());
+		$('[data-toggle="tooltip"]').each(function(){
+			$(this).attr('title', $(this).html());
 		}).tooltip(); 
 
 
