@@ -274,9 +274,9 @@
                   </div>
                 </aside>
                 <aside id="twzipcode">
-                  <span data-role="payment-county" data-style="col-xs-4" data-value="臺北市"></span>
-                  <span data-role="payment-district" data-style="col-xs-6" data-value="信義區"></span>
-                  <span data-role="payment-zipcode" data-style="hide" data-value="110"></span>
+                  <span data-role="county" data-value="台北市"></span>
+                  <span data-role="district" data-value="信義區"></span>
+                  <span data-role="zipcode" data-style="hide" data-value="110"></span>
                 </aside>
               </aside>
               <aside class="row">
@@ -330,9 +330,9 @@
                   </div>
                 </aside>
                 <aside id="twzipcode2">
-                  <span data-role="payment-county" data-style="col-xs-4" data-value="臺北市"></span>
-                  <span data-role="payment-district" data-style="col-xs-6" data-value="信義區"></span>
-                  <span data-role="payment-zipcode" data-style="hide" data-value="110"></span>
+                  <span data-role="county" data-value="台北市"></span>
+                  <span data-role="district" data-value="信義區"></span>
+                  <span data-role="zipcode" data-style="hide" data-value="110"></span>
                 </aside>
               </aside>
               <aside class="row">
@@ -388,7 +388,7 @@
                         </label>
                       </aside>
                     
-                      <aside class="col-sm-9 col-xs-12 vertical-middle">
+                      <aside class="col-sm-9 col-xs-12 vertical-middle nowrap">
                         <select class="form-control donate-type" id="SelectDonateCode" name="SelectDonateCode">
                           <option value="7505">中華社會福利聯合勸募協會</option>
                           <option value="8957282">財團法人流浪動物之家基金會</option>
@@ -414,7 +414,7 @@
                           <input type="radio" name="receiptMethod1Type" value="OtherDonateCode"  id="receiptMethod1Type2">其他社福團體愛心碼：
                         </label>
                       </aside>
-                      <aside class="col-sm-9 col-xs-12 vertical-middle fontsize-12 fontsize-sm-30">
+                      <aside class="col-sm-9 col-xs-12 vertical-middle fontsize-12 fontsize-sm-30 nowrap">
                         <input id="OtherDonateCode" class="form-control donate-type" placeholder="(限數字)" disabled="disabled" readonly="readonly">
                         <a href="https://www.einvoice.nat.gov.tw/APMEMBERVAN/XcaOrgPreserveCodeQuery/XcaOrgPreserveCodeQuery?CSRT=4350550699150711492" target="_blank" style="color:#F36;">查詢社福團體愛心碼索引</a>
                       </aside>
@@ -468,19 +468,19 @@
                           <aside id="member-carrier-same-as-buyer">
                             <aside class="row">
                               <aside class="col-sm-1 hidden-xs vertical-middle text-right">姓名</aside>
-                              <aside class="col-sm-5 col-xs-6 vertical-middle">
+                              <aside class="col-sm-5 col-xs-6 vertical-middle nowrap">
                                 <input class="form-control" placeholder="請填姓名">
                               </aside>
 
                               <aside class="col-sm-1 hidden-xs vertical-middle text-right">手機</aside>
-                              <aside class="col-sm-5 col-xs-6 vertical-middle">
+                              <aside class="col-sm-5 col-xs-6 vertical-middle nowrap">
                                 <input class="form-control" placeholder="請填手機號碼">
                               </aside>
                             </aside>
                             <aside class="row">
 
                               <aside class="col-sm-1 hidden-xs vertical-middle text-right">地址</aside>
-                              <aside class="col-xs-6 col-sm-4">
+                              <aside class="col-xs-6 col-sm-5">
                                 <div class="bfh-selectbox bfh-countries" id="countries_states3" data-country="TW" data-available="TW,CN,US,HK,TH,MY,PH,VN,SG" data-blank="false" data-flags="true" data-name="country3">
                                 </div>
                               </aside>
@@ -500,9 +500,9 @@
                                 </div>
                               </aside>
                               <aside id="twzipcode3">
-                                <span data-role="payment-county" data-style="col-xs-5" data-value="臺北市"></span>
-                                <span data-role="payment-district" data-style="col-xs-6" data-value="信義區"></span>
-                                <span data-role="payment-zipcode" data-style="hide" data-value="110"></span>
+                                <span data-role="county" data-value="台北市"></span>
+                                <span data-role="district" data-value="信義區"></span>
+                                <span data-role="zipcode" data-style="hide" data-value="110"></span>
                               </aside>
                             </aside>
                             <aside class="row">
@@ -533,12 +533,12 @@
                         <aside class="col-xs-12">
                           <aside class="row">
                             <aside class="col-sm-2 hidden-xs vertical-middle text-right">請填手機載具：</aside>
-                            <aside class="col-sm-4 col-xs-12 vertical-middle">
+                            <aside class="col-sm-4 col-xs-12 vertical-middle nowrap">
                               <input class="form-control" placeholder="請填手機載具">
                             </aside>
 
                             <aside class="col-sm-2 hidden-xs vertical-middle text-right">再確認手機載具：</aside>
-                            <aside class="col-sm-4 col-xs-12 vertical-middle">
+                            <aside class="col-sm-4 col-xs-12 vertical-middle nowrap">
                               <input class="form-control" placeholder="再確認手機載具">
                             </aside>
                             <aside class="col-sm-4 col-xs-12 vertical-middle">
@@ -564,12 +564,12 @@
                         <aside class="col-xs-12">
                           <aside class="row">
                             <aside class="col-sm-1 hidden-xs vertical-middle text-right nowrap">統一編號：</aside>
-                            <aside class="col-sm-5 col-xs-12 vertical-middle">
+                            <aside class="col-sm-5 col-xs-12 vertical-middle nowrap">
                               <input class="form-control" placeholder="統一編號">
                             </aside>
 
                             <aside class="col-sm-1 hidden-xs vertical-middle text-right nowrap">發票抬頭：</aside>
-                            <aside class="col-sm-5 col-xs-12 vertical-middle">
+                            <aside class="col-sm-5 col-xs-12 vertical-middle nowrap">
                               <input class="form-control" placeholder=" 發票抬頭">
                             </aside>
                           </aside>
@@ -582,19 +582,19 @@
                           <aside id="parts-carrier-same-as-buyer">
                             <aside class="row">
                               <aside class="col-sm-1 hidden-xs vertical-middle text-right">姓名</aside>
-                              <aside class="col-sm-5 col-xs-6 vertical-middle">
+                              <aside class="col-sm-5 col-xs-6 vertical-middle nowrap">
                                 <input class="form-control" placeholder="請填姓名">
                               </aside>
 
                               <aside class="col-sm-1 hidden-xs vertical-middle text-right">手機</aside>
-                              <aside class="col-sm-5 col-xs-6 vertical-middle">
+                              <aside class="col-sm-5 col-xs-6 vertical-middle nowrap">
                                 <input class="form-control" placeholder="請填手機號碼">
                               </aside>
                             </aside>
                             <aside class="row">
 
                               <aside class="col-sm-1 hidden-xs vertical-middle text-right">地址</aside>
-                              <aside class="col-xs-6 col-sm-4">
+                              <aside class="col-xs-6 col-sm-5">
                                 <div class="bfh-selectbox bfh-countries" id="countries_states4" data-country="TW" data-available="TW,CN,US,HK,TH,MY,PH,VN,SG" data-blank="false" data-flags="true" data-name="country4">
                                 </div>
                               </aside>
@@ -614,9 +614,9 @@
                                 </div>
                               </aside>
                               <aside id="twzipcode4">
-                                <span data-role="payment-county" data-style="col-xs-5" data-value="臺北市"></span>
-                                <span data-role="payment-district" data-style="col-xs-6" data-value="信義區"></span>
-                                <span data-role="payment-zipcode" data-style="hide" data-value="110"></span>
+                                <span data-" data-value="台北市"></span>
+                                <span data-"payment-district" data-value="信義區"></span>
+                                <span data-payment-zipcode" data-style="hide" data-value="110"></span>
                               </aside>
                             </aside>
                             <aside class="row">
@@ -691,7 +691,7 @@
     <script src="/bower_components/gsap/src/uncompressed/TweenMax.js"></script>
     <script src="/bower_components/lodash/lodash.js"></script>
     <script src="/bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
-    <script src="/bower_components/jquery-TWzipcode/jquery.twzipcode.min.js"></script>
+    <script src="/bower_components/jquery-TWzipcode/jquery.twzipcode.js"></script>
     <script src="/bower_components/bootstrap-formhelpers/dist/js/bootstrap-formhelpers.js"></script>
     <script src="/bower_components/bootstrap-formhelpers/js/lang/zh_TW/bootstrap-formhelpers-countries.zh_TW.js"></script>
     <!-- endbower -->

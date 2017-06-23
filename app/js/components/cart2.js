@@ -21,19 +21,27 @@ app.partial.cart2 = function(){
 		$('#btnBack').on('click', function(){
 			history.go(-1);
 		});
-		$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').twzipcode();
+		$('#twzipcode, #twzipcode2, #twzipcode3, #twzipcode4').twzipcode().on('change.twzipcode keyup.twzipcode blur.twzipcode', function(e){
+			console.log(this)
+			$(this).find('[name=district]').selectpicker('destroy').selectpicker();
+			$(this).find('[name=county]').selectpicker('destroy').selectpicker();
+			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+			$('#twzipcode3, #twzipcode4').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+			$('#twzipcode3, #twzipcode4').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+		});
 
 		$('[name=county]').selectpicker().on('change', function(){
 			$(this).parents('.row').find('[name=district]').selectpicker('destroy').selectpicker();
-			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
 			$('#twzipcode3, #twzipcode4').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-6');
-			$('#twzipcode3, #twzipcode4').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-2');
+			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+			$('#twzipcode3, #twzipcode4').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
 		}).trigger('change');
 
 		
 		$('#countries_states1').on('change.bfhselectbox', function(e){
-			if($('#countries_states1').val() === 'TW' || $('#countries_states1').val() === 'SG'){
+			if($('#countries_states1').val() === 'TW'){
 				$('#states1').hide();
 			}else{
 				$('#states1').show();
@@ -47,7 +55,7 @@ app.partial.cart2 = function(){
 
 		
 		$('#countries_states2').on('change.bfhselectbox', function(e){
-			if($('#countries_states2').val() === 'TW' || $('#countries_states2').val() === 'SG'){
+			if($('#countries_states2').val() === 'TW'){
 				$('#states2').hide();
 			}else{
 				$('#states2').show();
@@ -61,7 +69,7 @@ app.partial.cart2 = function(){
 
 		
 		$('#countries_states3').on('change.bfhselectbox', function(e){
-			if($('#countries_states3').val() === 'TW' || $('#countries_states3').val() === 'SG'){
+			if($('#countries_states3').val() === 'TW'){
 				$('#states3').hide();
 			}else{
 				$('#states3').show();
@@ -75,7 +83,7 @@ app.partial.cart2 = function(){
 
 		
 		$('#countries_states4').on('change.bfhselectbox', function(e){
-			if($('#countries_states4').val() === 'TW' || $('#countries_states4').val() === 'SG'){
+			if($('#countries_states4').val() === 'TW'){
 				$('#states4').hide();
 			}else{
 				$('#states4').show();
