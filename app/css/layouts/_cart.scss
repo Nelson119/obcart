@@ -321,10 +321,15 @@
 	.total-form{
 		line-height: 3em;
 		overflow: hidden;
-		.bfh-selectbox{
-			margin-top:0.5em;
-			height: 2em;
-			line-height: 3em;
+		.countries{
+			// margin-top:0.5em;
+			height: 42px;
+			line-height: 42px;
+			white-space: nowrap;
+			.bfh-selectbox{
+				height:33px;
+				width: 100%;
+			}
 		}
 		#twzipcode,#twzipcode2,#twzipcode3,#twzipcode4{
 
@@ -422,6 +427,10 @@
 			// 	position: absolute;
 			// 	right: 0;
 			}
+		}
+
+		.btn-group{
+			width: 100%!important;
 		}
 	}
 

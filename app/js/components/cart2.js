@@ -25,18 +25,18 @@ app.partial.cart2 = function(){
 			console.log(this)
 			$(this).find('[name=district]').selectpicker('destroy').selectpicker();
 			$(this).find('[name=county]').selectpicker('destroy').selectpicker();
-			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode3, #twzipcode4').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode3, #twzipcode4').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+			$('#twzipcode, #twzipcode2').find('[data-role=district]').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode3, #twzipcode4').find('[data-role=district]').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode, #twzipcode2').find('[data-role=county]').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode3, #twzipcode4').find('[data-role=county]').addClass('col-xs-6 col-sm-6');
 		});
 
 		$('[name=county]').selectpicker().on('change', function(){
-			$(this).parents('.row').find('[name=district]').selectpicker('destroy').selectpicker();
-			$('#twzipcode, #twzipcode2').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode3, #twzipcode4').find('[name=district]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode, #twzipcode2').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
-			$('#twzipcode3, #twzipcode4').find('[name=county]').parents('.btn-group').addClass('col-xs-6 col-sm-3');
+			$(this).parents('.row').find('[data-role=district]').selectpicker('destroy').selectpicker();
+			$('#twzipcode, #twzipcode2').find('[data-role=district]').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode3, #twzipcode4').find('[data-role=district]').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode, #twzipcode2').find('[data-role=county]').addClass('col-xs-6 col-sm-6');
+			$('#twzipcode3, #twzipcode4').find('[data-role=county]').addClass('col-xs-6 col-sm-6');
 		}).trigger('change');
 
 		
